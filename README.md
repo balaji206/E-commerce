@@ -18,3 +18,8 @@
 - linked mongo DB with the backend,error handling
   **Tech Stack**
 - Mongo DB, Express JS, Nodemon
+
+## Milestone 4
+
+- created an file inside model folder
+- Used mongoose , bcrypt and jsonwebtoken
