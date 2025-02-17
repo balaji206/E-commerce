@@ -1,17 +1,28 @@
 import React, { useState } from 'react'
 import { IoMailSharp } from 'react-icons/io5';  // Correct import
 import { LuEye, LuEyeClosed } from 'react-icons/lu';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import server from '../../server';
+import { Navigate } from 'react-router-dom';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [visible, setVisible] = useState(false);
-
+    const navigate = useNavigate()
     const handlePasswordVisibilityToggle = () => {
         setVisible(!visible);
     };
 
+    const handlesubmit=async(e)=>{
+        e.preventdefault()
+        await axios.post(`${server}/login-page`,{email,password})
+        .then(res=>{
+            console.log('login success')
+            navigate('/')}).catch((e)=>{
+                console.log(e.message)
+            })
+    }
     return (
         <div className='h-screen flex justify-center items-center bg-gray-100'>
             <div className='box-border flex flex-col bg-slate-200 h-96 w-96 shadow-xl rounded-xl'>
