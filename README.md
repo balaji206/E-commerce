@@ -23,3 +23,8 @@
 
 - created an file inside model folder
 - Used mongoose , bcrypt , jsonwebtoken and multer
+
+## Milestone 5
+
+- Created the signup page with tailwind css 
+- Added form validation
