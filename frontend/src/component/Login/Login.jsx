@@ -29,7 +29,7 @@ function Login() {
                 <div>
                     <h1 className='text-center text-2xl font-bold'>User Login</h1>
                 </div>
-                <div className='w-full flex flex justify-center items-center'>
+                <div className='w-full flex justify-center items-center'>
                     <form className='w-full flex flex-col justify-center items-center mt-4'>
                         <div className='flex rounded-lg bg-sky-100 shadow-lg w-full h-10 justify-between items-center mb-4'>
                             <input

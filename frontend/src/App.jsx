@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import { Routes,Route } from 'react-router-dom'
 import { Loginpage } from './routes/routes'
-import Home from './page/home'
+import Home from './page/Home'
 import Signup from './component/signup/signup'
 function App() {
 
