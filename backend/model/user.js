@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-
 const userSchema = new mongoose.schema({
     name:{type:String,required:true},
     email:{type:String,required:true,unique:true},
@@ -24,7 +23,6 @@ role:{type:string,default:user},
 createdAt:{type:Date,default:Date.now()}
 
 })
-
 userSchema.pre('save',async function(){
     if(this.isModified('password'))
         return next()

@@ -14,3 +14,5 @@ app.listen(process.env.PORT,()=>[
     console.log(`Server Successfully listen at port http://localhost:${process.env.PORT}`)
 ])
 
+
+process.on('unhandledRejection',()=>{process.exit(1)})
