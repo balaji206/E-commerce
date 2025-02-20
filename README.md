@@ -37,3 +37,15 @@
 - ## Validate Password:
 - Use bcrypt to hash the entered password.
 - Compare it with the stored hashed password for authentication.
+
+## Milestone-8
+- Designed a reusable card component with props for product details (e.g., name, image, price).
+- Added a grid layout or flexbox for displaying multiple cards neatly.
+
+## Milestone-9
+- Create the form for products
+- This form will take multiple product images images as input
+
+## Milestone-10
+- Created product schema
+- Created an end point to validate and store product details in mongodb.
