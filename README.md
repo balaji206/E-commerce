@@ -45,3 +45,19 @@
 
 ## validate password 
 - Ensures that only valid data is saved in the database, maintaining data integrity and preventing errors.
+
+## Milestone 11
+- Created an endpoint to fetch all products from MongoDB.
+- Implemented a frontend function to retrieve and display product data.
+- Dynamically rendered products using the existing Product Card component.
+
+## Milestone 12
+- Implemented an endpoint to fetch products based on user email from MongoDB.
+- Created a function in the frontend to retrieve and display filtered product data.
+- Dynamically rendered products using the existing Product Card component.
+
+## Milestone 13
+- Created put endpoint
+
+## Milestone 14
+- Created delete endpoint
