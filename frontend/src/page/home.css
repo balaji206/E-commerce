@@ -1,0 +1,11 @@
+.productdetails{
+
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    background-color: #f8f8f8;  
+    left: 40px;
+}

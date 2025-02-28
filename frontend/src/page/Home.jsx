@@ -1,6 +1,6 @@
 import React from "react";
 import Product from "../component/Product"
-
+import './Home.css';
 const productDetails = [
     {
       name: "Product 1",
