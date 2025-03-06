@@ -67,3 +67,6 @@
 My-products,
 Add product and
 cart
+
+## Milestone 16
+- Created an new page that displays all product data
