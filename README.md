@@ -61,3 +61,9 @@
 
 ## Milestone 14
 - Created delete endpoint
+
+## Milestone 15
+- Created an Navbar and Linked it to Home,
+My-products,
+Add product and
+cart
