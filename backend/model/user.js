@@ -6,10 +6,25 @@ const userSchema = new mongoose.schema({
     email:{type:String,required:true,unique:true},
     phoneNumber:{type:Number},
     password:{type:String,required:true,minLength:6},
+    role:{type:String,default:'user'},
     avatar:{
         id:{type:String},
         url:{type:String},
+    },cart:[
+        {
+        productid:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"Product",
+            required:true,
+        },
+        quantity:{
+            type:Number,
+            required:true,
+            min:1,
+            default:1,
+        },
     },
+],
     address:[{
         country:{type:string , required:true},
         city:{type:string,required:true},

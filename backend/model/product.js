@@ -11,7 +11,24 @@ const productSchema = new mongoose.Schema({
     images:{type:[String],required:[true]},
     createdAt:{
         type:Date,
-        default:Date.now()
-    }
-},{timestamps:true,})
-module.exports = mongoose.model("Product",productSchema)
+        default:Date.now(),
+    },cart:[
+        {
+            productid:{
+                type:string,
+                required:true,
+                unique:true,
+            },
+            quantity:{
+                type:Number,
+                required:true,
+                min:0,
+            },
+        },
+    ],
+},
+{
+    timestamps:true,
+}
+)
+module.exports = mongoose.model("Product",productSchema);

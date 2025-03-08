@@ -1,4 +1,4 @@
-# E-commerce   
+﻿# E-commerce   
 ## Milestone 1   
 - got overview of the e-commerce project Tech Stack   
 - MongoDb, nodeJS, express, react   
@@ -61,3 +61,6 @@
 
 ## Milestone 14
 - Created delete endpoint
+
+## Milestone 15
+- Created an Navbar 
