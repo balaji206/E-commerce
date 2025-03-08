@@ -63,4 +63,14 @@
 - Created delete endpoint
 
 ## Milestone 15
-- Created an Navbar 
+
+- Created an Navbar and Linked it to Home,
+My-products,
+Add product and
+cart
+
+## Milestone 16
+- Created an new page that displays all product data
+
+## Milestone 17 
+- Added backend endpoint to add products to cart and to store in database.
