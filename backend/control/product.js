@@ -4,6 +4,7 @@ const Product = require('../model/product')
 const {pupload} = require('../multer')
 const router = express.Router()
 const path = require('path');
+const { populate } = require('dotenv')
 
 const validateProductData=(data)=>{
     const errors = [];
@@ -190,5 +191,31 @@ if(!products)
     }
     catch(e){
         res.status(500).send(e.message)
+    }
+ })
+
+ router.get('/cartProduct',async(req,res)=>{
+    const {email} = req.query;
+    try{
+        if(!email)
+        {
+            res.status(404).send('Login to add to cart')
+        }
+        const user = await User.findOne({email}).populate({path: 'cart.productid',
+            model:'Product'
+        })
+        if(!user)
+        {
+            res.status(400).send('register to add to cart')
+        }
+        res.status(200).json({
+            message:'Cart retrieved succesfully',
+            cart:user.Cart
+        });
+
+    }catch(err)
+    {
+        console.error('Server error:'.err)
+        res.status(500).json({error:'Server Error'});
     }
  })
