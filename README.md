@@ -74,3 +74,7 @@ cart
 
 ## Milestone 17 
 - Added backend endpoint to add products to cart and to store in database.
+
+## Milestone 18
+- Created an endpoint to receive request from cart page.
+- Created an backend endpoint to fetch all the products inside cart with user mail.
