@@ -1,4 +1,4 @@
-﻿# E-commerce   
+# E-commerce   
 ## Milestone 1   
 - got overview of the e-commerce project Tech Stack   
 - MongoDb, nodeJS, express, react   
@@ -78,3 +78,6 @@ cart
 ## Milestone 18
 - Created an endpoint to receive request from cart page.
 - Created an backend endpoint to fetch all the products inside cart with user mail.
+
+## Milestone 19
+- Created an cart page that display the products inside cart using endpoint that was build in milestone 18.
