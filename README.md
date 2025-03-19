@@ -81,3 +81,13 @@ cart
 
 ## Milestone 19
 - Created an cart page that display the products inside cart using endpoint that was build in milestone 18.
+
+## Milestone 20
+- Created an backend endpoint that sends all the user data using mail.
+- Created an frontend profile page that displays all the user data.
+
+## Milestone 21
+- Created an frontend form that takes address.
+
+## Milestone 22
+- Created an backend endpoint that stores the address inside user profile in the database.
