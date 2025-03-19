@@ -144,7 +144,6 @@ if(!products)
                 return product;
             })
             res.status(200).json({ products: productsWithFullImageUrl })}
-    
             catch (err) {
                 console.error(' Server error:', err);
                 res.status(500).json({ error: 'Server error. Could not fetch products.' });
