@@ -95,3 +95,6 @@ cart
 ## Milestone 23 
 - Created an placeorder button inside cart page and navigated to select address page when clicked.
 - Created and selected address page that will display all the available address and have an option to select one address.
+
+## Milestone 24
+- Created an order conformation page.
