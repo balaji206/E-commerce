@@ -1,50 +1,64 @@
-const mongoose = require('mongoose')
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
-const userSchema = new mongoose.schema({
-    name:{type:String,required:true},
-    email:{type:String,required:true,unique:true},
-    phoneNumber:{type:Number},
-    password:{type:String,required:true,minLength:6},
-    role:{type:String,default:'user'},
-    avatar:{
-        id:{type:String},
-        url:{type:String},
-    },cart:[
-        {
-        productid:{
-            type:mongoose.Schema.Types.ObjectId,
-            ref:"Product",
-            required:true,
-        },
-        quantity:{
-            type:Number,
-            required:true,
-            min:1,
-            default:1,
-        },
-    },
-],
-    address:[{
-        country:{type:string , required:true},
-        city:{type:string,required:true},
-        address1:{type:string},
-        address2:{type:string},
-        pincode:{type:Number,required:true},
+const mongoose=require('mongoose')
+const jwt=require('jsonwebtoken')
+const bcrypt=require('bcryptjs')
 
-    }
-],
-role:{type:string,default:user},
-createdAt:{type:Date,default:Date.now()}
 
-})
-userSchema.pre('save',async function(){
-    if(this.isModified('password'))
-        return next()
-        await bcrypt.hash(this.password,10)
-        next()
+const userSchema = new mongoose.Schema({
+    name:{type:String , required:true},
+    email:{type:String,required:true,
+      unique: true,
+      match: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, },
     
-})
-userSchema.methods.jsonTokens = function(){
-    return  jwt.sign({id:this._id},process.env.JWT_TOKEN,{expiresIn:process.env.JWT_EXPIRES})
+    password:{type:String,required:true,minLength:4},
+    phoneNumber:{type:Number},
+    address:[
+{
+    country:{type:String},
+    city:{type:String},
+    address1:{type:String},
+    address2:{type:String},
+    zipcode:{type:Number},
+    addressType:{type:String}
 }
+    ],
+    role:{type:String,default:'user'},
+avatar:{
+    id:{type:String},
+    url:{type:String}
+}, cart: [
+    {
+      productId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Product",
+        required: true,
+      },
+      quantity: {
+        type: Number,
+        required: true,
+        min: 1,
+        default: 1,
+      },
+    },
+  ],
+cretedAt:{type:Date,default:Date.now()}
+
+})
+
+
+userSchema.pre('save',async function(next){
+if(!this.isModified("password")){
+    return next()
+}
+this.password= await bcrypt.hash(this.password,10)
+
+})
+userSchema.methods.getJwtToken=function(){
+    return jwt.sign({id:this._id} ,process.env.JWT_SECRET, {expiresIn:process.env.JWT_EXPIRES})
+}
+
+userSchema.methods.comparePassword=async function(enterPassword){
+ return await bcrypt.compare(enterPassword,this.password)   
+}
+
+
+module.exports=mongoose.model('User',userSchema)
