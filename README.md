@@ -98,3 +98,9 @@ cart
 
 ## Milestone 24
 - Created an order conformation page.
+
+## Milestone 25
+- Created an backend endpoint that helps in placing the order.
+
+## Milestone 26
+- Created an backend endpoint that helps in getting all the orders of the user.
