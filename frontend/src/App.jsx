@@ -11,6 +11,7 @@ import axios from 'axios';
 function App() {
     const [count, setCount] = useState(0);
 
+    
 useEffect(()=>{
 axios.get(`${server}/user/getuser`,{withCredentials:true})
 .then(res=>{console.log(res.data)
