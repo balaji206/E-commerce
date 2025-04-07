@@ -110,3 +110,6 @@ cart
 
 ## Milestone 28
 - In this added cancel button in my-orders and created an backend endpoint for cancel order.
+
+## Milestone 29
+- Added online payment gateway to the application using Paypal api.
