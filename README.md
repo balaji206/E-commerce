@@ -104,3 +104,9 @@ cart
 
 ## Milestone 26
 - Created an backend endpoint that helps in getting all the orders of the user.
+
+## Milestone 27
+- Created an frontend page that will display all the user orders.
+
+## Milestone 28
+- In this added cancel button in my-orders and created an backend endpoint for cancel order.
