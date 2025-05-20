@@ -113,3 +113,14 @@ cart
 
 ## Milestone 29
 - Added online payment gateway to the application using Paypal api.
+
+## Milestone 30
+- Used PayPal API.
+- Integrated online payments.
+
+## Milestone 31
+- Used redux for global state management
+- Implemented redux store to store all global states
+
+## Milestone 32
+- Used redux to store the state and access in all the pages.
